@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const ExploreScreen = () => {
+const FavouriteScreen = () => {
   return (
     <View>
-      <Text>ExploreScreen</Text>
+      <Text>FavouriteScreen</Text>
     </View>
   );
 };
 
-export default ExploreScreen;
+export default FavouriteScreen;
 
 const styles = StyleSheet.create({});
