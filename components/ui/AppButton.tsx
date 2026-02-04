@@ -11,6 +11,8 @@ const AppButton = ({
 }: AppButtonProps) => {
   return (
     <TouchableOpacity
+      accessibilityRole="button"
+      accessible={true}
       onPress={onPress}
       style={[style]}
       className={`${loading ? "bg-transparent" : "bg-primary"} h-[67px] w-full items-center justify-center rounded-[19px] p-4 font-bold`}
