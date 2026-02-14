@@ -122,6 +122,7 @@ const Location = () => {
               placeholder="Banassree"
               onPress={() => setZoneOpen(true)}
             />
+
             {errors.zone && (
               <Text className="font-gilroy-regular mt-1.5 text-sm text-red-600">
                 {errors.zone}
