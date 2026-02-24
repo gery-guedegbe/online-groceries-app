@@ -48,6 +48,7 @@ const AddToCartButton = ({ isVisible, onHide, itemCount }: Props) => {
               {itemCount}
             </Text>
           </View>
+
           <Text className="font-gilroy-semibold text-base text-white">
             Added to Cart
           </Text>
@@ -60,6 +61,7 @@ const AddToCartButton = ({ isVisible, onHide, itemCount }: Props) => {
           <Text className="font-gilroy-semibold text-sm text-white">
             Open Cart
           </Text>
+
           <Image source={images.right_arrow} className="tint-white h-2 w-2" />
         </Pressable>
       </View>
