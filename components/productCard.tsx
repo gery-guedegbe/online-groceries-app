@@ -4,18 +4,22 @@ import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 interface ProductCardProps extends Product {
-  onPress: () => void;
+  onPress: (product: Product) => void;
 }
 
 const ProductCard = ({
+  id,
   image,
   name,
   unit,
   price,
+  category,
+  description,
+  rating,
   onPress,
 }: ProductCardProps) => {
   return (
-    <View className="flex min-h-[248px] w-[173px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3">
+    <View className="m-2 flex h-[248px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3">
       <Image
         source={image}
         resizeMode="contain"
@@ -37,7 +41,21 @@ const ProductCard = ({
           ${price}
         </Text>
 
-        <TouchableOpacity className="flex h-[45px] w-[45px] items-center justify-center rounded-[17px] bg-primary">
+        <TouchableOpacity
+          onPress={() =>
+            onPress({
+              id,
+              name,
+              price,
+              unit,
+              category,
+              description,
+              image,
+              rating,
+            })
+          }
+          className="flex h-[45px] w-[45px] items-center justify-center rounded-[17px] bg-primary"
+        >
           <Image
             source={images.plus_icon}
             resizeMode="contain"

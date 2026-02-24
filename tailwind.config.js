@@ -11,6 +11,10 @@ module.exports = {
         "gilroy-medium": ["Gilroy-Medium"],
         "gilroy-semibold": ["Gilroy-SemiBold"],
         "gilroy-bold": ["Gilroy-Bold"],
+        "aclonica-regular": ["Aclonica-Regular"],
+        "airbnbcereal-bold": ["AirbnbCereal-Bold"],
+        "airbnbcereal-semibold": ["AirbnbCereal-SemiBold"],
+        "airbnbcereal-medium": ["AirbnbCereal-Medium"],
       },
       colors: {
         primary: "#53B175",

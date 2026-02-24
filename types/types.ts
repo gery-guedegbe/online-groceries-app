@@ -34,6 +34,14 @@ export type Product = {
   rating: number;
 };
 
+export type Category = {
+  id: string;
+  title: string;
+  image: ImageSourcePropType;
+  bg: string;
+  border: string;
+};
+
 export type CartItem = {
   product: Product;
   quantity: number;

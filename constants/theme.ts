@@ -1,9 +1,17 @@
+import back_icon from "../assets/images/back-icon.png";
+import banner_bg_image_1 from "../assets/images/banner/banner-bg-image-1.png";
+import banner_bg_transparent from "../assets/images/banner/banner-bg-transparent.png";
+import banner_bg from "../assets/images/banner/banner-bg.png";
 import carrot from "../assets/images/carrot-icon.png";
 import cart_icon from "../assets/images/cart-icon.png";
+import check_button_icon from "../assets/images/check-button-icon.png";
+import pulses_image from "../assets/images/groceries/pulses_image.png";
+import sack_of_rice_image from "../assets/images/groceries/sack-of-rice-image.png";
 import heart_icon from "../assets/images/heart-icon.png";
 import loop_icon from "../assets/images/loop-icon.png";
 import location from "../assets/images/map-icon.png";
 import plus_icon from "../assets/images/plus_icon.png";
+import right_arrow from "../assets/images/right_arrow.png";
 import search_icon from "../assets/images/search-icon.png";
 import shop_banner from "../assets/images/shop-banner.png";
 import store_icon from "../assets/images/store-icon.png";
@@ -36,4 +44,12 @@ export const images = {
   loop_icon,
   shop_banner,
   plus_icon,
+  banner_bg,
+  banner_bg_transparent,
+  banner_bg_image_1,
+  pulses_image,
+  sack_of_rice_image,
+  back_icon,
+  check_button_icon,
+  right_arrow,
 };

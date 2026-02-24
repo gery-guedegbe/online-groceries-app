@@ -15,6 +15,10 @@ export default function RootLayout() {
     "Gilroy-SemiBold": require("../assets/fonts/Gilroy-SemiBold.ttf"),
     "Gilroy-Bold": require("../assets/fonts/Gilroy-Bold.ttf"),
     "Gilroy-Light": require("../assets/fonts/Gilroy-Light.ttf"),
+    "Aclonica-Regular": require("../assets/fonts/Aclonica-Regular.ttf"),
+    "AirbnbCereal-Bold": require("../assets/fonts/AirbnbCereal_W_Bd.otf"),
+    "AirbnbCereal-SemiBold": require("../assets/fonts/AirbnbCereal_W_Bd.otf"),
+    "AirbnbCereal-Medium": require("../assets/fonts/AirbnbCereal_W_Md.otf"),
   });
 
   useEffect(() => {
