@@ -27,6 +27,7 @@ const TabLayout = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true,
         tabBarStyle: {
           borderTopLeftRadius: 15,
           borderTopRightRadius: 15,
