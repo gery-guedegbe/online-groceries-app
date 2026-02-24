@@ -1,25 +1,30 @@
 import { images } from "@/constants/theme";
 import { Product } from "@/types/types";
+import { useRouter } from "expo-router";
 import React from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 
 interface ProductCardProps extends Product {
   onPress: (product: Product) => void;
 }
 
-const ProductCard = ({
-  id,
-  image,
-  name,
-  unit,
-  price,
-  category,
-  description,
-  rating,
-  onPress,
-}: ProductCardProps) => {
+const ProductCard = (product: ProductCardProps) => {
+  const { id, image, name, unit, price, onPress } = product;
+
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push({
+      pathname: "/(product)/[id]/page",
+      params: { id: id },
+    });
+  };
+
   return (
-    <View className="m-2 flex h-[248px] max-w-[154px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3">
+    <Pressable
+      onPress={handleNavigate}
+      className="m-2 flex h-[248px] max-w-[154px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3"
+    >
       <Image
         source={image}
         resizeMode="contain"
@@ -42,18 +47,10 @@ const ProductCard = ({
         </Text>
 
         <TouchableOpacity
-          onPress={() =>
-            onPress({
-              id,
-              name,
-              price,
-              unit,
-              category,
-              description,
-              image,
-              rating,
-            })
-          }
+          onPress={(e) => {
+            e.stopPropagation();
+            onPress(product);
+          }}
           className="flex h-[45px] w-[45px] items-center justify-center rounded-[17px] bg-primary"
         >
           <Image
@@ -63,7 +60,7 @@ const ProductCard = ({
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
