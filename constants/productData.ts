@@ -1,9 +1,21 @@
+import garden_mayonnaise from "../assets/images/american-garden-mayonnaise-eggless-image.png";
+import apple_grape_juice from "../assets/images/apple-grape-juice-image.png";
 import banana_image from "../assets/images/banana-image.png";
+import coca_cola_can from "../assets/images/coca-cola-can-image.png";
+import coke_diet from "../assets/images/coke-diet-image.png";
+import egg_chicken_red from "../assets/images/egg-chicken-red-image.png";
+import egg_chicken_white from "../assets/images/egg-chicken-white-image.png";
+import egg_noddles from "../assets/images/egg-noddles-image.png";
+import egg_noddle from "../assets/images/egg-noodle-image.png";
+import egg_pasta from "../assets/images/egg-pasta-image.png";
+import orange_juice from "../assets/images/orange-juice-image.png";
+import pepsi_can from "../assets/images/pepsi-can-image.png";
 import apple_image from "../assets/images/product-images/apple-image.png";
 import beef_image from "../assets/images/product-images/beef-image.png";
 import chicken_image from "../assets/images/product-images/chicken-image.png";
 import ginger_image from "../assets/images/product-images/ginger-image.png";
 import pepper_image from "../assets/images/product-images/pepper-image.png";
+import sprite_can from "../assets/images/sprite-image.png";
 
 export const products = [
   {
@@ -65,6 +77,126 @@ export const products = [
     description: "Fresh broiler chicken meat",
     rating: 4.6,
     image: chicken_image,
+  },
+  {
+    id: "7",
+    name: "Diet Coke",
+    price: 1.99,
+    unit: "333ml",
+    category: "Beverages",
+    description: "Refreshing sugar-free sparkling cola drink",
+    rating: 4.8,
+    image: coke_diet,
+  },
+  {
+    id: "8",
+    name: "Sprite Can",
+    price: 1.5,
+    unit: "333ml",
+    category: "Beverages",
+    description: "Crisp lemon-lime flavored sparkling soda",
+    rating: 4.9,
+    image: sprite_can,
+  },
+  {
+    id: "9",
+    name: "Apple & Grape Juice",
+    price: 15.99,
+    unit: "2L",
+    category: "Beverages",
+    description: "Sweet blend of apple and grape fruit juice",
+    rating: 4.7,
+    image: apple_grape_juice,
+  },
+  {
+    id: "10",
+    name: "Orange Juice",
+    price: 15.99,
+    unit: "2L",
+    category: "Beverages",
+    description: "Fresh and tangy orange fruit juice",
+    rating: 4.9,
+    image: orange_juice,
+  },
+  {
+    id: "11",
+    name: "Pepsi Can",
+    price: 4.99,
+    unit: "330ml",
+    category: "Beverages",
+    description: "Classic cola soft drink with bold flavor",
+    rating: 4.9,
+    image: pepsi_can,
+  },
+  {
+    id: "12",
+    name: "Coca Cola Can",
+    price: 4.99,
+    unit: "325ml",
+    category: "Beverages",
+    description: "Iconic sparkling cola soft drink",
+    rating: 4.9,
+    image: coca_cola_can,
+  },
+  {
+    id: "13",
+    name: "Egg Chicken Red",
+    price: 1.99,
+    unit: "4pcs",
+    category: "Dairy & Eggs",
+    description: "Fresh red shell chicken eggs rich in protein",
+    rating: 4.5,
+    image: egg_chicken_red,
+  },
+  {
+    id: "14",
+    name: "Egg Chicken White",
+    price: 1.5,
+    unit: "180g",
+    category: "Dairy & Eggs",
+    description: "Farm fresh white chicken eggs",
+    rating: 4.5,
+    image: egg_chicken_white,
+  },
+  {
+    id: "15",
+    name: "Egg Pasta",
+    price: 15.99,
+    unit: "30gm",
+    category: "Grains & Pasta",
+    description: "Soft egg-based pasta perfect for quick meals",
+    rating: 4.5,
+    image: egg_pasta,
+  },
+  {
+    id: "16",
+    name: "Egg Noodles",
+    price: 15.99,
+    unit: "200g",
+    category: "Grains & Pasta",
+    description: "Delicious egg noodles for stir-fry dishes",
+    rating: 4.5,
+    image: egg_noddles,
+  },
+  {
+    id: "17",
+    name: "Egg Noodle",
+    price: 15.99,
+    unit: "200g",
+    category: "Grains & Pasta",
+    description: "Classic egg noodles with smooth texture",
+    rating: 4.5,
+    image: egg_noddle,
+  },
+  {
+    id: "18",
+    name: "Mayonnaise Eggless",
+    price: 4.99,
+    unit: "325ml",
+    category: "Condiments & Sauces",
+    description: "Creamy eggless mayonnaise perfect for sandwiches",
+    rating: 4.5,
+    image: garden_mayonnaise,
   },
 ];
 
