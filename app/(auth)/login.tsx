@@ -36,8 +36,8 @@ const Login = () => {
 
   return (
     <ScreenWrapper>
-      <View className="flex-1 px-6">
-        <View className="flex items-center justify-center p-24">
+      <View className="flex flex-1 flex-col justify-between px-6 py-20">
+        <View className="flex items-center justify-center p-10">
           <Image
             source={require("../../assets/images/carrot-icon.png")}
             resizeMode="contain"

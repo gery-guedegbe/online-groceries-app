@@ -1,13 +1,16 @@
+import { CheckoutOrder } from "@/components/order/CheckoutOrder";
 import AppButton from "@/components/ui/AppButton";
 import { images } from "@/constants/theme";
 import { useStore } from "@/store/store";
 import { useRouter } from "expo-router";
-import React from "react";
+import React, { useState } from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const CartScreen = () => {
   const router = useRouter();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const cart = useStore((state) => state.cart);
 
@@ -32,8 +35,26 @@ const CartScreen = () => {
     removeFromCart(productId);
   };
 
+  const totalPrice = cart
+    .reduce((acc, item) => acc + item.product.price * item.quantity, 0)
+    .toFixed(2);
+
+  const handleCheckoutModal = () => {
+    setIsOpen(true);
+  };
+
+  const handlePlaceOrder = () => {
+    if (cart.length === 0) return;
+
+    // cart.forEach((item) => removeFromCart(item.product.id));
+
+    router.push("/order-accepted/OrderAccepted");
+
+    setIsOpen(false);
+  };
+
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="relative flex-1 bg-white">
       <View className="flex-1">
         <Text className="border-b border-b-neutral500 p-7 text-center font-gilroy-bold text-xl text-neutral900">
           My Cart
@@ -139,14 +160,25 @@ const CartScreen = () => {
           </View>
         </ScrollView>
 
-        <View className="p-4">
-          <AppButton onPress={() => router.push("/checkout/checkout")}>
-            <Text className="font-gilroy-semibold text-base font-semibold text-neutral400">
-              Go to Checkout
-            </Text>
-          </AppButton>
-        </View>
+        {cart.length > 0 && (
+          <View className="p-4">
+            <AppButton onPress={handleCheckoutModal}>
+              <Text className="font-gilroy-semibold text-base font-semibold text-neutral400">
+                Go to Checkout
+              </Text>
+            </AppButton>
+          </View>
+        )}
       </View>
+
+      {isOpen && cart.length > 0 && (
+        <CheckoutOrder
+          totalPrice={totalPrice}
+          onPress={handlePlaceOrder}
+          onClose={() => setIsOpen(false)}
+          visible={isOpen}
+        />
+      )}
     </SafeAreaView>
   );
 };

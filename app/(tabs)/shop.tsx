@@ -18,19 +18,9 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  const exclusiveProducts = products.filter((item) => Number(item.id) < 3);
-  const bestSellingProducts = products.filter(
-    (item) => Number(item.id) >= 3 && Number(item.id) < 5,
-  );
-  const groceriesProducts = products.filter(
-    (item) => Number(item.id) >= 5 && Number(item.id) < 7,
-  );
-
   const router = useRouter();
 
   const cart = useStore((state) => state.cart);
-
-  console.log("Cart Content: ", cart);
 
   const addToCart = useStore((state) => state.addToCart);
 
@@ -70,9 +60,9 @@ export default function Index() {
 
   return (
     <SafeAreaView className="flex-1">
-      <View className="flex-1">
+      <View className="flex-1 bg-white">
         <ScrollView className="flex-1">
-          <View className="flex flex-1 flex-col items-center justify-center gap-6 bg-white px-4 py-5">
+          <View className="flex flex-1 flex-col items-center justify-center gap-6 px-4 py-5">
             <View className="flex flex-col items-center justify-center gap-2.5">
               <Image
                 source={images.carrot}
@@ -112,7 +102,7 @@ export default function Index() {
 
             <BannerCard />
 
-            <View className="gap-4">
+            <View className="flex-1 gap-4">
               <View className="flex w-full flex-row items-center justify-between">
                 <Text className="font-gilroy-semibold text-[24px] font-semibold text-neutral900">
                   Exclusive Offer
@@ -123,25 +113,34 @@ export default function Index() {
                 </Text>
               </View>
 
-              <View className="flex w-full flex-row">
-                {exclusiveProducts.map((item) => (
-                  <ProductCard
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    price={item.price}
-                    unit={item.unit}
-                    category={item.category}
-                    description={item.description}
-                    image={item.image}
-                    rating={item.rating}
-                    onPress={handleAddToCart}
-                  />
-                ))}
-              </View>
+              <FlatList
+                data={products}
+                keyExtractor={(item) => item.id}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                  paddingHorizontal: 2,
+                }}
+                renderItem={({ item }) => (
+                  <View className="flex w-full flex-1 flex-row items-center justify-center gap-4">
+                    <ProductCard
+                      key={item.id}
+                      id={item.id}
+                      name={item.name}
+                      price={item.price}
+                      unit={item.unit}
+                      category={item.category}
+                      description={item.description}
+                      image={item.image}
+                      rating={item.rating}
+                      onPress={handleAddToCart}
+                    />
+                  </View>
+                )}
+              />
             </View>
 
-            <View className="gap-4">
+            <View className="flex-1 gap-4">
               <View className="flex w-full flex-row items-center justify-between">
                 <Text className="font-gilroy-semibold text-[24px] font-semibold text-neutral900">
                   Best Selling
@@ -152,25 +151,34 @@ export default function Index() {
                 </Text>
               </View>
 
-              <View className="flex w-full flex-row">
-                {bestSellingProducts.map((item) => (
-                  <ProductCard
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    price={item.price}
-                    unit={item.unit}
-                    category={item.category}
-                    description={item.description}
-                    image={item.image}
-                    rating={item.rating}
-                    onPress={handleAddToCart}
-                  />
-                ))}
-              </View>
+              <FlatList
+                data={products}
+                keyExtractor={(item) => item.id}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                  paddingHorizontal: 2,
+                }}
+                renderItem={({ item }) => (
+                  <View className="flex w-full flex-1 flex-row items-center justify-center gap-4">
+                    <ProductCard
+                      key={item.id}
+                      id={item.id}
+                      name={item.name}
+                      price={item.price}
+                      unit={item.unit}
+                      category={item.category}
+                      description={item.description}
+                      image={item.image}
+                      rating={item.rating}
+                      onPress={handleAddToCart}
+                    />
+                  </View>
+                )}
+              />
             </View>
 
-            <View className="gap-4">
+            <View className="flex-1 gap-4">
               <View className="flex w-full flex-row items-center justify-between">
                 <Text className="font-gilroy-semibold text-[24px] font-semibold text-neutral900">
                   Groceries
@@ -210,22 +218,31 @@ export default function Index() {
                 />
               </View>
 
-              <View className="flex w-full flex-row">
-                {groceriesProducts.map((item) => (
-                  <ProductCard
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    price={item.price}
-                    unit={item.unit}
-                    category={item.category}
-                    description={item.description}
-                    image={item.image}
-                    rating={item.rating}
-                    onPress={handleAddToCart}
-                  />
-                ))}
-              </View>
+              <FlatList
+                data={products}
+                keyExtractor={(item) => item.id}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                  paddingHorizontal: 2,
+                }}
+                renderItem={({ item }) => (
+                  <View className="flex w-full flex-1 flex-row items-center justify-center gap-4">
+                    <ProductCard
+                      key={item.id}
+                      id={item.id}
+                      name={item.name}
+                      price={item.price}
+                      unit={item.unit}
+                      category={item.category}
+                      description={item.description}
+                      image={item.image}
+                      rating={item.rating}
+                      onPress={handleAddToCart}
+                    />
+                  </View>
+                )}
+              />
             </View>
           </View>
         </ScrollView>

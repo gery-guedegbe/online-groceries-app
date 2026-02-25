@@ -1,3 +1,14 @@
+import about_icon from "../assets/images/account/about-icon.png";
+import bell_icon from "../assets/images/account/bell-icon.png";
+import delicery_address_icon from "../assets/images/account/delicery-address-icon.png";
+import edit_icon_green from "../assets/images/account/edit-icon.png";
+import help_icon from "../assets/images/account/help-icon.png";
+import logout_icon from "../assets/images/account/logout-icon.png";
+import my_details_icon from "../assets/images/account/my-details-icon.png";
+import orders_icon from "../assets/images/account/orders-icon.png";
+import payment_method_icon from "../assets/images/account/payment-method-icon.png";
+import promo_card_icon from "../assets/images/account/promo-card-icon.png";
+import user_profile_image from "../assets/images/account/user-profile-image.jpg";
 import apple_grape_juice from "../assets/images/apple-grape-juice-image.png";
 import back_icon from "../assets/images/back-icon.png";
 import banner_bg_image_1 from "../assets/images/banner/banner-bg-image-1.png";
@@ -6,8 +17,10 @@ import banner_bg from "../assets/images/banner/banner-bg.png";
 import carrot from "../assets/images/carrot-icon.png";
 import cart_icon from "../assets/images/cart-icon.png";
 import check_button_icon from "../assets/images/check-button-icon.png";
+import close_icon_black from "../assets/images/close-icon-black.png";
 import close_icon from "../assets/images/close-icon.png";
 import coke_diet from "../assets/images/coke-diet-image.png";
+import edit_icon from "../assets/images/edit-icon.png";
 import export_icon from "../assets/images/export-icon.png";
 import favorite_icon from "../assets/images/favorite-icon.png";
 import pulses_image from "../assets/images/groceries/pulses_image.png";
@@ -15,9 +28,11 @@ import sack_of_rice_image from "../assets/images/groceries/sack-of-rice-image.pn
 import heart_icon from "../assets/images/heart-icon.png";
 import loop_icon from "../assets/images/loop-icon.png";
 import location from "../assets/images/map-icon.png";
+import master_card from "../assets/images/mastercard-icon.png";
 import minus_icon from "../assets/images/minus_icon.png";
 import non_favorite_icon from "../assets/images/non-favorite-icon.png";
 import orange_juice from "../assets/images/orange-juice-image.png";
+import order_accepted_image from "../assets/images/order-accepted-image.png";
 import pepsi_can from "../assets/images/pepsi-can-image.png";
 import plus_green_icon from "../assets/images/plus_green_icon.png";
 import plus_icon from "../assets/images/plus_icon.png";
@@ -78,4 +93,19 @@ export const images = {
   sprite_can,
   close_icon,
   right_black_arrow,
+  close_icon_black,
+  master_card,
+  order_accepted_image,
+  edit_icon,
+  about_icon,
+  bell_icon,
+  delicery_address_icon,
+  edit_icon_green,
+  help_icon,
+  logout_icon,
+  my_details_icon,
+  orders_icon,
+  payment_method_icon,
+  promo_card_icon,
+  user_profile_image,
 };

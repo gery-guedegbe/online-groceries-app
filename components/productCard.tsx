@@ -23,7 +23,7 @@ const ProductCard = (product: ProductCardProps) => {
   return (
     <Pressable
       onPress={handleNavigate}
-      className="m-2 flex h-[248px] max-w-[154px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3"
+      className="m-2 flex h-[248px] min-w-[154px] flex-1 flex-col justify-between gap-2 rounded-[18px] border border-neutral500 p-3"
     >
       <Image
         source={image}

@@ -107,13 +107,15 @@ const FavouriteScreen = () => {
           </View>
         </ScrollView>
 
-        <View className="p-4">
-          <AppButton onPress={handleAddAllToCart}>
-            <Text className="font-gilroy-semibold text-base font-semibold text-neutral400">
-              Add All To Cart
-            </Text>
-          </AppButton>
-        </View>
+        {favorites.length > 0 && (
+          <View className="p-4">
+            <AppButton onPress={handleAddAllToCart}>
+              <Text className="font-gilroy-semibold text-base font-semibold text-neutral400">
+                Add All To Cart
+              </Text>
+            </AppButton>
+          </View>
+        )}
       </View>
     </SafeAreaView>
   );

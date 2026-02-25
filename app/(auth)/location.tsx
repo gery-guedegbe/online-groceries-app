@@ -77,7 +77,7 @@ const Location = () => {
 
   return (
     <ScreenWrapper>
-      <View className="flex flex-1 flex-col gap-6 px-6 pt-10">
+      <View className="flex flex-1 flex-col justify-between gap-6 px-6 py-16">
         <TouchableOpacity
           onPress={() => router.back()}
           accessible={true}
@@ -114,7 +114,7 @@ const Location = () => {
           </View>
         </View>
 
-        <View className="mt-14 gap-6">
+        <View className="gap-6">
           <View>
             <SelectField
               label="Your zone"

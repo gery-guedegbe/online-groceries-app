@@ -66,7 +66,7 @@ const ProductDetailScreen = () => {
       <ScrollView className="flex-1">
         <View className="flex h-[371px] flex-col items-center rounded-b-[40px] bg-[#F2F3F2] p-6">
           <View className="flex w-full flex-row items-center justify-between">
-            <Pressable onPress={() => router.back()}>
+            <Pressable hitSlop={20} onPress={() => router.back()}>
               <Image
                 source={images.back_icon}
                 resizeMode="contain"
