@@ -61,7 +61,7 @@ Le projet suit les meilleures pratiques de structure de dossiers pour une scalab
 1. Clonez le dépôt :
 
 ```bash
-git clone [https://github.com/gery-guedegbe/online-groceries-app.git](https://github.com/gery-guedegbe/online-groceries-app.git)
+git clone https://github.com/gery-guedegbe/online-groceries-app.git
 ```
 
 2. Installez les dépendances :
